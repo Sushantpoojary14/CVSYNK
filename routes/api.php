@@ -37,7 +37,7 @@ Route::controller(\App\Http\Controllers\UserController::class)->group(function (
     Route::get('/all_posts/{start?}/{end?}', 'getAllPosts');
     Route::get('/all_filter_details', 'getAllFilterDetails');
     Route::post('/filter_posts', 'getPostsByFilter');
-    Route::get('/search_posts/{search}', 'getPostsByFilter');
+    Route::get('/search_posts/{search}', 'getPostsBySearch');
 
     Route::middleware('auth')->group(function () {
         Route::post('/apply_job_post', 'applyJobPost');
